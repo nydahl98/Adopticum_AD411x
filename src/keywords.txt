@@ -1,0 +1,16 @@
+# Syntax coloring map for Adopticum_AD411x library
+
+# Datatypes (KEYWORD1)
+AD4116_Device 	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+set_bit 	KEYWORD2
+print_bytes 	KEYWORD2
+begin     KEYWORD2
+
+# Structures (KEYWORD3)
+
+# Instances (KEYWORD2)
+ad4116	KEYWORD2
+
+# Constants (LITERAL1)
