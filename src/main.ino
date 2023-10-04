@@ -126,10 +126,10 @@ void loop()
   if (samples[0] > 5.001) {
         Serial.print("probed");
         Serial.print(" channel 0: ");
-        Serial.print(samples[0], 3);
+        Serial.print(samples[0], 4);
         Serial.print(" V ");
         Serial.print(" channel 1: ");
-        Serial.print(samples[1]);
+        Serial.print(samples[1], 4);
         Serial.print(" V ");
         Serial.println();
         digitalWrite(probePin, HIGH);
@@ -139,10 +139,10 @@ void loop()
  else {
   Serial.print("no probe");
   Serial.print(" channel 0: ");
-  Serial.print(samples[0], 3);
+  Serial.print(samples[0], 4);
   Serial.print(" V ");
   Serial.print(" channel 1: ");
-  Serial.print(samples[1]);
+  Serial.print(samples[1], 4);
   Serial.print(" V ");
   Serial.println();
 
