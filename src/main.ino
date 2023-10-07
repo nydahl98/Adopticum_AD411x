@@ -36,7 +36,7 @@ namespace config
   // Connect DRDY pin to CIPO (a.k.a. MISO) pin.
   const int DRDY_PIN = 3;
   // Select an output data rate for the AD4116.
-  const uint16_t ODR = (uint16_t)AD4116::OutputDataRate::SPS_5194;
+  const uint16_t ODR = (uint16_t)AD4116::OutputDataRate::SPS_10416;
 }
 
 void setup_ad4116()
@@ -60,7 +60,7 @@ void setup_ad4116()
   ad4116.configure_setup(0, setup_cfg);
 
   // Configure setup 0 to use default filtering (sinc5+sinc1 + 20 SPS 50/60Hz rejection)
-  ad4116.write_filter_register(0, AD411x::Filter::DEFAULT_FILTER | config::ODR);
+  ad4116.write_filter_register(0, AD411x::Filter::SINC5_SINC1 | config::ODR);
 
   // Configure ADC mode to continuous measurement.
   ad4116.write_adc_mode((uint16_t)AD411x::ADCMode::Mode::CONTINUOUS);
