@@ -124,82 +124,30 @@ void loop()
 
 
   if (samples[0] > 5.001) {
-        Serial.print("probed");
-        Serial.print(" channel 0: ");
-        Serial.print(samples[0], 4);
-        Serial.print(" V ");
-        Serial.print(" channel 1: ");
-        Serial.print(samples[1], 4);
-        Serial.print(" V ");
-        Serial.println();
+        // Serial.print("probed");
+        // Serial.print(" channel 0: ");
+        // Serial.print(samples[0], 4);
+        // Serial.print(" V ");
+        // Serial.print(" channel 1: ");
+        // Serial.print(samples[1], 4);
+        // Serial.print(" V ");
+        // Serial.println();
         digitalWrite(probePin, HIGH);
   
   
  }
  else {
-  Serial.print("no probe");
-  Serial.print(" channel 0: ");
-  Serial.print(samples[0], 4);
-  Serial.print(" V ");
-  Serial.print(" channel 1: ");
-  Serial.print(samples[1], 4);
-  Serial.print(" V ");
-  Serial.println();
+  // Serial.print("no probe");
+  // Serial.print(" channel 0: ");
+  // Serial.print(samples[0], 4);
+  // Serial.print(" V ");
+  // Serial.print(" channel 1: ");
+  // Serial.print(samples[1], 4);
+  // Serial.print(" V ");
+  // Serial.println();
 
-  Serial.println();
+  // Serial.println();
   digitalWrite(probePin, LOW);
  }
 
-
-
-  // auto half_second = millis() / 500;
-
-  // Limit printing outout to  only once per halv second.
-  // if (half_second <= output_counter)
-  // {
-  //   return;
-  // }
-  // output_counter++;
-
-  //   Serial.print(" ch ");
-  //   Serial.print(0);
-  //   Serial.print(": ");
-  //   //Serial.print(samples[i]);
-  //   Serial.print(samples[0]);
-  //   Serial.print(" V ");
-  //   Serial.println("");
-  //   Serial.print(" ch ");
-  //   Serial.print(1);
-  //   Serial.print(": ");
-  //   Serial.print(samples[1]);
-  //   Serial.print(" V ");
-
-  // Print the latest samples.
-  // Serial.print("Latest samples:");
-  // for (auto i = 0; i < 3; i++)
-  // {
-  //   Serial.print(" ch ");
-  //   Serial.print(i);
-  //   Serial.print(": ");
-  //   Serial.print(samples[i]);
-  //   Serial.print(" V ");
-  
-  // }
-  // Serial.println("");
-
-  // Limit toggling outputs to only once every 2 seconds (4 halv seconds).
-  // if (output_counter / 4 <= toggle_counter)
-  // {
-  //   return;
-  // }
-  // toggle_counter++;
-
-  // Toggle some outputs to use as example analog signals.
-  // byte toggle = toggle_counter % 2;
-  // Serial.print("Toggle output: ");
-  // Serial.println(toggle);
-  // Use digitalWrite to get 0V or 5V, instead of PWM.
-  // digitalWrite(A1, toggle);     // analogWrite(A1, 255 * toggle);
-  // digitalWrite(A2, toggle);     // analogWrite(A2, 255 * toggle);
-  // digitalWrite(A3, 1 - toggle); // analogWrite(A3, 255 * (1-toggle));
 }
